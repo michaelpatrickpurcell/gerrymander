@@ -4,8 +4,8 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric}
 \usepackage{fontspec}
-%\setmainfont{Tex Gyre Schola}
-\setmainfont[Scale=0.95]{Century Gothic}
+\setmainfont{Tex Gyre Schola}
+%\setmainfont[Scale=0.95]{Century Gothic}
 \usepackage{contour}
 \usepackage{multicol}
 \setlength{\columnsep}{1cm}
@@ -31,7 +31,7 @@
 \begin{document}
 {
 %\setmainfont[Scale=2.5]{Tex Gyre Schola}
-\setmainfont[Scale=2.375]{Century Gothic}
+\setmainfont[Scale=2.5]{Century Gothic}
 \begin{center}
 \Huge \textbf{Gerrymander}
 \end{center}
@@ -41,24 +41,36 @@
 \vspace{-0.5cm}
 
 \begin{center}
-\scalebox{2.85}{
+\scalebox{2.88}{
 \input{electorate_grid.tex}
 }
-\marginnote{\section*{Scoring}
-The game ends when you have created nine districts. Your score depends on how many of each icon are in each district.
+\marginnote{\section*{Gameplay}
+You will partition your board into nine \emph{districts}. A district is a set of  four adjacent grid squares.
 
-Consider the scoring table below. For each row you accessed:
-\begin{itemize}[leftmargin=*, nosep]
-\item Score one point for each of your districts that has three or more of the circled icons.
-\vspace{0.2ex}
-\item Lose one point for each district that has one or fewer of the circled icons.
-\end{itemize}
+To do so, draw lines that indicate how you will partition your board. Then, score your partition.
 
-\vspace{-0.4ex}
+You score one point for each district that has three or more of the icons you circled earlier.
+
+The first player to finish should \emph{bid} by announcing their score. Then they should start the timer.
+
+If any other player can find a higher-scoring solution before time expires, they should bid by announcing their score.
+
+Afterwards, the player with the highest bid should display their solution. Everyone else should verify that their bid is correct.
+
+If so, that player wins. If not, the player with the next highest bid should display their solution. Continue like this until someone can demonstrate a correct bid. That player wins the game.
+
+}[-15.5875cm]
+\reversemarginpar\marginnote{\raggedright\section*{Overview}
+
+Gerrymander is a simultaneous puzzle-solving game for any number of players which can be played in less than five minutes.
+
+Each player will need a pencil and a copy of these rules. You will need one 20-sided die and a 30-second sand timer to share.
+
+To begin, one player should roll the die. Then, everyone should circle the three icons next to the die result on the table below.
 
 \begin{center}
-\begin{tabular}{c c@{\hskip 3pt}c@{\hskip 3pt}c c c@{\hskip 3pt}c@{\hskip 3pt}c}\toprule
-Die & \multicolumn{3}{c}{Icons} & Die & \multicolumn{3}{c}{Icons} \\ \midrule
+\begin{tabular}{c@{\hskip 6pt}c@{\hskip 3pt}c@{\hskip 3pt}c@{\hskip 6pt}c@{\hskip 6pt}c@{\hskip 3pt}c@{\hskip 3pt}c}\toprule
+Die & \multicolumn{3}{c}{Icons\ \ \ \ } & Die & \multicolumn{3}{c}{Icons\ \ \ \ } \\ \midrule
 \phantom{1}1 & \raisebox{-0.25ex}{\drawonestar{}} & \raisebox{-0.25ex}{\drawtwostar{}} & \raisebox{-0.25ex}{\drawthreestar{}} & 11 & \raisebox{-0.25ex}{\drawfourstar{}} & \raisebox{-0.25ex}{\drawfivestar{}} & \raisebox{-0.25ex}{\drawsixstar{}} \\[0.5ex]
 \phantom{1}2 & \raisebox{-0.25ex}{\drawonestar{}} & \raisebox{-0.25ex}{\drawtwostar{}} & \raisebox{-0.25ex}{\drawfourstar{}} & 12 & \raisebox{-0.25ex}{\drawthreestar{}} & \raisebox{-0.25ex}{\drawfivestar{}} & \raisebox{-0.25ex}{\drawsixstar{}} \\[0.5ex]
 \phantom{1}3 & \raisebox{-0.25ex}{\drawonestar{}} & \raisebox{-0.25ex}{\drawtwostar{}} & \raisebox{-0.25ex}{\drawfivestar{}} & 13 & \raisebox{-0.25ex}{\drawthreestar{}} & \raisebox{-0.25ex}{\drawfourstar{}} & \raisebox{-0.25ex}{\drawsixstar{}} \\[0.5ex]
@@ -69,34 +81,9 @@ Die & \multicolumn{3}{c}{Icons} & Die & \multicolumn{3}{c}{Icons} \\ \midrule
 \phantom{1}8 & \raisebox{-0.25ex}{\drawonestar{}} & \raisebox{-0.25ex}{\drawfourstar{}} & \raisebox{-0.25ex}{\drawfivestar{}} & 18 & \raisebox{-0.25ex}{\drawtwostar{}} & \raisebox{-0.25ex}{\drawthreestar{}} & \raisebox{-0.25ex}{\drawsixstar{}} \\[0.5ex]
 \phantom{1}9 & \raisebox{-0.25ex}{\drawonestar{}} & \raisebox{-0.25ex}{\drawfourstar{}} & \raisebox{-0.25ex}{\drawsixstar{}} & 19 & \raisebox{-0.25ex}{\drawtwostar{}} & \raisebox{-0.25ex}{\drawthreestar{}} & \raisebox{-0.25ex}{\drawfivestar{}} \\[0.5ex]
 10 & \raisebox{-0.25ex}{\drawonestar{}} & \raisebox{-0.25ex}{\drawfivestar{}} & \raisebox{-0.25ex}{\drawsixstar{}} & 20 & \raisebox{-0.25ex}{\drawtwostar{}} & \raisebox{-0.25ex}{\drawthreestar{}} & \raisebox{-0.25ex}{\drawfourstar{}} \\ \bottomrule
-
-\end{tabular}
+\end{tabular}\ \ \ \ \ 
 \end{center}
-
-}[-15.5cm]
-\reversemarginpar\marginnote{\raggedright\section*{Gameplay}
-Give everyone a pencil and a copy of these rules. Find one 20-sided die to share.
-
-During the game, you will divide your board into nine sets of four grid squares called \emph{districts}. 
-
-Each round, one player should roll the die. Find the row on the scoring table indicated by the die result and do the following:
-\begin{itemize}[leftmargin=*, nosep]
-\item If you have accessed this row before, then skip this step.
-\vspace{0.2ex}
-\item Otherwise, circle the icons next to your die result and cross out the other icons on that row.
-\end{itemize}
-
-Then, draw a straight line on the board subject to the following:
-\begin{itemize}[leftmargin=*, nosep]
-\item Your line must start and end at a corner of a grid square.
-\vspace{0.2ex}
-\item Your line must be either vertical or horizontal.
-\vspace{0.2ex}
-\item Your line may not pass through another line.
-\vspace{0.2ex}
-\item Your line may not enclose any regions that do not contain a multiple of four grid squares.
-\end{itemize}
-}[-15.5cm]
+}[-15.5875cm]
 
 \vfill
 

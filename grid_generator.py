@@ -50,13 +50,13 @@ def generate_electorate_grid(locations):
         point2 = '(%fin, %fin)' % (location[0], location[1]-0.035)
         pic.node(r'\phantom{.}', at=point, minimum_width='0.33in', minimum_height='0.33in')#, fill=color_list[2])
         # pic.node(r'\contour{black}{\textcolor{white}{3}}', at=point)
-        pic.node(r'\phantom{.}', at=point2, regular_polygon=True, regular_polygon_sides=3, fill=color_list[2], inner_sep='1.65pt')
+        pic.node(r'\phantom{.}', at=point2, regular_polygon=True, regular_polygon_sides=3, draw=color_list[2], line_width='0.9mm', inner_sep='1.0pt')
 
     for location in locations[18:24]:
         point = '(%fin, %fin)' % (location[0], location[1])
         pic.node(r'\phantom{.}', at=point, minimum_width='0.33in', minimum_height='0.33in')#, fill=color_list[3])
         # pic.node(r'\contour{black}{\textcolor{white}{4}}', at=point)
-        pic.node(r'\phantom{.}', at=point, draw=color_list[3], diamond=True, inner_sep='2.35pt', line_width='0.9mm')
+        pic.node(r'\phantom{.}', at=point, draw=color_list[3], diamond=True, inner_sep='2.125pt', line_width='0.9mm', fill=color_list[3])
 
     for location in locations[24:30]:
         point = '(%fin, %fin)' % (location[0], location[1])

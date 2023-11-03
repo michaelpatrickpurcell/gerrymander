@@ -9,11 +9,11 @@
 
 \tikzset{threestar/.pic={
 \node[inner sep=0pt] at (0,0) {};
-\node[regular polygon, regular polygon sides=3, fill=black, inner sep=1.65pt] at (0,-0.7mm) {\normalsize\phantom{.}};
+\node[regular polygon, regular polygon sides=3, draw==black, line width=0.9mm, inner sep=1.0pt] at (0,-0.7mm) {\normalsize\phantom{.}};
 }}
 
 \tikzset{fourstar/.pic={
-\node[draw=black, diamond, inner sep=2.35pt, line width=0.9mm] at (0,0) {\normalsize\phantom{.}};
+\node[draw=black, fill=black, diamond, inner sep=2.125pt, line width=0.9mm] at (0,0) {\normalsize\phantom{.}};
 }}
 
 \tikzset{fivestar/.pic={
@@ -27,7 +27,7 @@
 
 \newcommand{\drawonestar}{\scalebox{0.75}{\tikz{\pic {onestar};}}}
 \newcommand{\drawtwostar}{\scalebox{0.75}{\tikz{\pic {twostar};}}}
-\newcommand{\drawthreestar}{\raisebox{0.1ex}{\scalebox{0.75}{\tikz{\pic {threestar};}}}}
+\newcommand{\drawthreestar}{\raisebox{0.0ex}{\scalebox{0.75}{\tikz{\pic {threestar};}}}}
 \newcommand{\drawfourstar}{\scalebox{0.75}{\tikz{\pic {fourstar};}}}
 \newcommand{\drawfivestar}{\scalebox{0.75}{\tikz{\pic {fivestar};}}}
 \newcommand{\drawsixstar}{\raisebox{0.125ex}{\scalebox{0.75}{\tikz{\pic {sixstar};}}}}
